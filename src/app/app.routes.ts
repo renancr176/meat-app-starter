@@ -6,6 +6,7 @@ import { RestaurantsComponent } from "./restaurants/restaurants.component";
 import { RestaurantDetailComponent } from "./restaurant-detail/restaurant-detail.component";
 import { MenuComponent } from "./restaurant-detail/menu/menu.component";
 import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
+import { NotFoundComponent } from "./error/not-found/not-found.component";
 //#endregion
 
 export const ROUTES: Routes = [
@@ -23,4 +24,5 @@ export const ROUTES: Routes = [
     }
     ,{ path: "order", loadChildren: './order/order.module#OrderModule' }
     ,{ path: "order-summary", loadChildren: './order-summary/order-summary.module#OrderSummaryModule'}
+    ,{ path: '**', component: NotFoundComponent}
 ]
